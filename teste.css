@@ -1,0 +1,70 @@
+.habilidades {
+  width: 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  height: 200px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.habilidade {
+  width: 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.habilidade .descricao {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.habilidade.html .descricao {
+  margin-top: 10px;
+}
+
+.habilidade.css .descricao {
+  margin-top: 10px;
+}
+
+.habilidade.js .descricao {
+  margin-top: 10px;
+}
+
+.habilidade.react .descricao {
+  margin-top: 10px;
+}
+
+.habilidade:hover .descricao {
+  display: block;
+}
+
+@media (max-width: 950px) {
+  .linha {
+    flex-direction: column;
+  }
+
+  .habilidade {
+    width: 100%;
+  }
+
+  .habilidade .descricao {
+    position: static;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .habilidade:target .descricao {
+    display: block;
+  }
+}
